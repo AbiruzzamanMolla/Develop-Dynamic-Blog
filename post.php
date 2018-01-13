@@ -1,4 +1,4 @@
-<?php include "inc/header.php"; ?>>
+<?php include "inc/header.php"; ?>
 
 	<div class="contentsection contemplete clear">
 		<div class="maincontent clear">
