@@ -5,7 +5,6 @@ Class Database{
 	public $pass   = DB_PASS;
 	public $dbname = DB_NAME;
 	
-	
 	public $link;
 	public $error;
 	
