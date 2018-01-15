@@ -1,8 +1,13 @@
 # Develop-Dynamic-Blog
 
--adding pages 
--adding page sigment
--showing post in index page from database
+- Project Overview
+- Initial Setup 
+- Database Creation
+- Page Segment
+- Show Post in Blog Page
+- Blog Pagination
+- Showing Post Details
+- 
 
 # Full Project work tree
 
