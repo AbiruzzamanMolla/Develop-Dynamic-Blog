@@ -28,7 +28,7 @@ if(!isset($_GET['id']) || $_GET['id'] == NULL){
 					$relatedPost = $db->select($relatedQuery);
 					if($relatedPost){
 						while($relatedresult = $relatedPost->fetch_assoc()){
-						?>	
+						?>
 					<a href="post.php?id=<?php echo $relatedresult['id']; ?>"><img src="admin/upload/<?php echo $relatedresult['image']; ?>" alt="<?php echo $relatedresult['title']; ?>"/></a>
 					<?php 	}
 					} else {
