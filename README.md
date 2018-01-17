@@ -1,7 +1,7 @@
 # Develop-Dynamic-Blog
 
 - Project Overview
-- Initial Setup 
+- Initial Setup
 - Database Creation
 - Page Segment
 - Show Post in Blog Page
@@ -9,6 +9,13 @@
 - Showing Post Details
 - Showing Posts By Category
 - Adding Search Functionality
+- Dynamic Admin Template
+- Creating Session Class
+- Admin Login Authentication
+- Admin Logout Option
+- Update Session Class
+- Showing Categories in Admin Panel
+- Add Categories From Admin Panel
 # Full Project work tree
 
 - 'Develop Dynamic Blog With PHP OOP (Project Overview).mp4'

@@ -14,5 +14,12 @@ class Format{
 		$text = $text."......";
 		return $text;
 	} // function to show limited text
+
+	public function validation($data){
+		$data = trim($data);
+		$data = stripcslashes($data);
+		$data = htmlspecialchars($data);
+		return $data;
+	}
 }
  ?>
