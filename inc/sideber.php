@@ -18,7 +18,7 @@
 	<?php
 $query = "SELECT * FROM tbl_post limit 5"; //selecting database
 $recentpost  = $db->select($query);
-if ($post) {
+if ($recentpost) {
 	while ($result = $recentpost->fetch_assoc()) {
 ?>
 		<div class="popular clear">
