@@ -11,7 +11,14 @@
 	$start_from = ($page-1)*$per_page;
 ?>
 <?php
-$query = "SELECT * FROM tbl_post limit $start_from, $per_page"; //selecting database
+if(!isset($_GET['cat_id']) || $_GET['cat_id'] == NULL){
+	header("Location: 404.php");
+} else {
+	$cat_id = $_GET['cat_id'];
+}
+?>
+<?php
+$query = "SELECT * FROM tbl_post WHERE catid = $cat_id limit $start_from, $per_page"; //selecting database
 $post  = $db->select($query);
 if ($post) {
 	while ($result = $post->fetch_assoc()) {
@@ -19,7 +26,7 @@ if ($post) {
 <div class="samepost clear">
 	<h2><a href="post.php?id=<?php echo $result['id']; ?>"><?php echo $result['title']; ?></a></h2>
 	<h4><?php echo $fm->formatData($result['date']); ?>, By <a href="#"><?php echo $result['author']; ?></a></h4>
-	<a href="post.php?id=<?php echo $result['id']; ?>"><img src="admin/upload/<?php echo $result['image']; ?>" alt="post image"/></a>
+	<a href="#"><img src="admin/upload/<?php echo $result['image']; ?>" alt="post image"/></a>
 	<p>
 		<?php echo $fm->textShorten($result['body']); ?> </p>
 	<div class="readmore clear">
@@ -29,15 +36,15 @@ if ($post) {
 <?php } //end of while loop ?>
 <!-- Pagination -->
 <?php
-$query = "SELECT * FROM tbl_post";
+$query = "SELECT * FROM tbl_post WHERE catid = $cat_id";
 $result = $db->select($query);
 $total_rows = mysqli_num_rows($result);
 $total_pages = ceil($total_rows/$per_page);
-echo "<span class='pagination'><a href='index.php?page=1'>".'First Page'."</a>";
+echo "<span class='pagination'><a href='posts.php?page=1&cat_id=$cat_id'>".'First Page'."</a>";
 for($i=1; $i<=$total_pages; $i++){
-	echo "<a href='index.php?page=".$i."'>".$i."</a>";
+	echo "<a href='posts.php?cat_id=$cat_id&page=".$i."'>".$i."</a>";
 }
-echo "<a href='index.php?page=$total_pages'>".'Last Page'."</a></span>"; ?>
+echo "<a href='posts.php?page=$total_pages&cat_id=$cat_id'>".'Last Page'."</a></span>"; ?>
 <!-- Pagination -->
 <?php } else{
 	header("Location:404.php");

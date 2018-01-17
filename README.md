@@ -7,8 +7,8 @@
 - Show Post in Blog Page
 - Blog Pagination
 - Showing Post Details
+- Showing Posts By Category
 - 
-
 # Full Project work tree
 
 - 'Develop Dynamic Blog With PHP OOP (Project Overview).mp4'
