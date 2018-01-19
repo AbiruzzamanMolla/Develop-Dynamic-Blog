@@ -11,7 +11,7 @@
 	$start_from = ($page-1)*$per_page;
 ?>
 <?php
-$query = "SELECT * FROM tbl_post limit $start_from, $per_page"; //selecting database
+$query = "SELECT * FROM tbl_post ORDER BY id DESC LIMIT $start_from, $per_page"; //selecting database
 $post  = $db->select($query);
 if ($post) {
 	while ($result = $post->fetch_assoc()) {
@@ -19,7 +19,7 @@ if ($post) {
 <div class="samepost clear">
 	<h2><a href="post.php?id=<?php echo $result['id']; ?>"><?php echo $result['title']; ?></a></h2>
 	<h4><?php echo $fm->formatData($result['date']); ?>, By <a href="#"><?php echo $result['author']; ?></a></h4>
-	<a href="post.php?id=<?php echo $result['id']; ?>"><img src="admin/upload/<?php echo $result['image']; ?>" alt="post image"/></a>
+	<a href="post.php?id=<?php echo $result['id']; ?>"><img src="admin/<?php echo $result['image']; ?>" alt="post image"/></a>
 	<p>
 		<?php echo $fm->textShorten($result['body']); ?> </p>
 	<div class="readmore clear">

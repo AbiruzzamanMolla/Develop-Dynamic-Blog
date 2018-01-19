@@ -46,9 +46,16 @@ $(window).load(function() {
 	<div class="headersection templete clear">
 		<a href="index.php">
 			<div class="logo">
-				<img src="images/logo.png" alt="Logo"/>
-				<h2>Website Title</h2>
-				<p>Our website description</p>
+			<?php
+			 $query = "SELECT * FROM tbl_settings WHERE id = '1'";
+			 $blogsettings = $db->select($query);
+			if($blogsettings){
+				while($result = $blogsettings->fetch_assoc()){
+			?>
+				<img src="admin/<?php echo $result['logo']; ?>" alt="Logo" />
+				<h2><?php echo $result['title']; ?></h2>
+				<p><?php echo $result['slogan']; ?></p>
+			<?php } } ?>
 			</div>
 		</a>
 		<div class="social clear">
