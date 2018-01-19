@@ -16,6 +16,15 @@
 - Update Session Class
 - Showing Categories in Admin Panel
 - Add Categories From Admin Panel
+- Update Categories From Admin Panel
+- Delete Categories From Admin Panel
+- Add Posts From Admin Panel
+- Showing Posts in Admin Panel
+- Showing Posts in Edit Page
+- Update Post with Condition
+- Delete Posts From Admin Panel
+- Table for Logo, Title, Slogan
+- Update Logo, Title, Slogan
 # Full Project work tree
 
 - 'Develop Dynamic Blog With PHP OOP (Project Overview).mp4'
