@@ -8,8 +8,15 @@
 			<li><a href="#">Contact</a></li>
 			<li><a href="#">Privacy</a></li>
 		</ul>
-	  </div>
-	  <p>&copy; Copyright Training with live project.</p>
+		</div>
+		<?php
+        $query = "SELECT * FROM tbl_copyright WHERE id = '1'";
+        $copyright = $db->select($query);
+        if($copyright){
+            while($result = $copyright->fetch_assoc()){
+        ?>
+		<p>&copy; <?php echo $result['note']; ?></p>
+						<?php } } ?>
 	</div>
 	<div class="fixedicon clear">
 	<?php
