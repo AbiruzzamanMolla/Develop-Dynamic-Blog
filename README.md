@@ -25,6 +25,8 @@
 - Delete Posts From Admin Panel
 - Table for Logo, Title, Slogan
 - Update Logo, Title, Slogan
+- Update Social Media Option
+- Update Copyright Option
 # Full Project work tree
 
 - 'Develop Dynamic Blog With PHP OOP (Project Overview).mp4'
