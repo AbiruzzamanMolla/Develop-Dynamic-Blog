@@ -7,13 +7,20 @@
                                 <li><a href="titleslogan.php">Title & Slogan</a></li>
                                 <li><a href="social.php">Social Media</a></li>
                                 <li><a href="copyright.php">Copyright</a></li>
-                                
                             </ul>
                         </li>
-						
                          <li><a class="menuitem">Update Pages</a>
                             <ul class="submenu">
-                                <li><a>About Us</a></li>
+                                <li><a href="addpage.php">Add Page</a></li>
+                                <?php
+                                $query = "SELECT * FROM tbl_page";
+                                $pages = $db->select($query);
+                                if($pages){
+                                    while($result=$pages->fetch_assoc()){ ?>
+                                        <li><a href='../page.php?pageid=<?php echo $result['id']; ?>'><?php echo $result['page_title']; ?></a></li>
+                                <?php    }
+                                }
+                                ?>
                                 <li><a>Contact Us</a></li>
                             </ul>
                         </li>

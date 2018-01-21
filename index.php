@@ -44,4 +44,4 @@ echo "<a href='index.php?page=$total_pages'>".'Last Page'."</a></span>"; ?>
 } ?>
 </div>
 <?php include "inc/sideber.php"; ?>
-<?php include "inc/footer.php"; ?>	
+<?php include "inc/footer.php"; ?>
