@@ -27,6 +27,8 @@
 - Update Logo, Title, Slogan
 - Update Social Media Option
 - Update Copyright Option
+- Dynamic Page Creation
+- Showing Pages Dynamically
 # Full Project work tree
 
 - 'Develop Dynamic Blog With PHP OOP (Project Overview).mp4'
