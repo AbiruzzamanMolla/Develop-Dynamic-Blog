@@ -36,7 +36,7 @@
 					</td>
 				</tr>
 		</table>
-	<form>				
+	<form>
  </div>
 
 		</div>
@@ -48,10 +48,8 @@
 						<li><a href="#">Category Two</a></li>
 						<li><a href="#">Category Three</a></li>
 						<li><a href="#">Category Four</a></li>
-						<li><a href="#">Category Five</a></li>						
+						<li><a href="#">Category Five</a></li>
 					</ul>
 			</div>
-					
 			<?php include "inc/sideber.php"; ?>
 			<?php include "inc/footer.php"; ?>
-		
