@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*
  * Formatting classes
  */
@@ -20,6 +20,16 @@ class Format{
 		$data = stripcslashes($data);
 		$data = htmlspecialchars($data);
 		return $data;
+	}
+	public function title(){
+		$path = $_SERVER['SCRIPT_FILENAME'];
+		$title = basename($path, '.php');
+		if($title == 'index'){
+			$title = "home";
+		} elseif($title == 'contect'){
+			$title = "contect";
+		}
+		return $title = ucwords($title);
 	}
 }
  ?>

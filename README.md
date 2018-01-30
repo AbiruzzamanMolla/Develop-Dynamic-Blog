@@ -29,6 +29,8 @@
 - Update Copyright Option
 - Dynamic Page Creation
 - Showing Pages Dynamically
+- Dynamically Displaying Page, Post Title in header.php
+
 # Full Project work tree
 
 - 'Develop Dynamic Blog With PHP OOP (Project Overview).mp4'
