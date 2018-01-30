@@ -30,6 +30,7 @@
 - Dynamic Page Creation
 - Showing Pages Dynamically
 - Dynamically Displaying Page, Post Title in header.php
+- Highlight Current Page or Menu Item
 
 ## Full Project work tree
 

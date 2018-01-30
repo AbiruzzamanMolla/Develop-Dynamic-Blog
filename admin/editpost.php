@@ -3,6 +3,8 @@
 <?php
 if(isset($_GET['id'])){
     $id = $_GET['id'];
+} else {
+    // echo "<script>window.location.href = 'postlist.php';</script>";
 }
 ?>
 <div class="grid_10">
