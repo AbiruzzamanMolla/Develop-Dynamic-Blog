@@ -31,6 +31,9 @@
 - Showing Pages Dynamically
 - Dynamically Displaying Page, Post Title in header.php
 - Highlight Current Page or Menu Item
+- Form Validation Details
+- Contact Form Validation
+- Work With Contact Form
 
 ## Full Project work tree
 

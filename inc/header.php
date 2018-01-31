@@ -59,43 +59,43 @@ $(window).load(function() {
 </script>
 </head>
 <body>
-	<div class="headersection templete clear">
-		<a href="index.php">
-			<div class="logo">
-			<?php
-			 $query = "SELECT * FROM tbl_settings WHERE id = '1'";
-			 $blogsettings = $db->select($query);
-			if($blogsettings){
-				while($result = $blogsettings->fetch_assoc()){
-			?>
-				<img src="admin/<?php echo $result['logo']; ?>" alt="Logo" />
-				<h2><?php echo $result['title']; ?></h2>
-				<p><?php echo $result['slogan']; ?></p>
-			<?php } } ?>
-			</div>
-		</a>
-		<div class="social clear">
-			<div class="icon clear">
-			<?php
-        $query = "SELECT * FROM tbl_social WHERE id = '1'";
-        $social = $db->select($query);
-        if($social){
-            while($result = $social->fetch_assoc()){
-        ?>
-				<a href="http://facebook.com/<?php echo $result['facebook']; ?>" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="http://twitter.com/<?php echo $result['twitter']; ?>" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="http://linked.com/<?php echo $result['linkedin']; ?>" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="http://plus.google.com/<?php echo $result['googleplus']; ?>" target="_blank"><i class="fa fa-google-plus"></i></a>
-			<?php } } ?>
-			</div>
-			<div class="searchbtn clear">
-			<form action="search.php" method="get">
-				<input type="text" name="search" placeholder="Search keyword..."/>
-				<input type="submit" name="submit" value="Search"/>
-			</form>
-			</div>
+<div class="headersection templete clear">
+	<a href="index.php">
+		<div class="logo">
+		<?php
+			$query = "SELECT * FROM tbl_settings WHERE id = '1'";
+			$blogsettings = $db->select($query);
+		if($blogsettings){
+			while($result = $blogsettings->fetch_assoc()){
+		?>
+			<img src="admin/<?php echo $result['logo']; ?>" alt="Logo" />
+			<h2><?php echo $result['title']; ?></h2>
+			<p><?php echo $result['slogan']; ?></p>
+		<?php } } ?>
+		</div>
+	</a>
+	<div class="social clear">
+		<div class="icon clear">
+		<?php
+	$query = "SELECT * FROM tbl_social WHERE id = '1'";
+	$social = $db->select($query);
+	if($social){
+		while($result = $social->fetch_assoc()){
+	?>
+			<a href="http://facebook.com/<?php echo $result['facebook']; ?>" target="_blank"><i class="fa fa-facebook"></i></a>
+			<a href="http://twitter.com/<?php echo $result['twitter']; ?>" target="_blank"><i class="fa fa-twitter"></i></a>
+			<a href="http://linked.com/<?php echo $result['linkedin']; ?>" target="_blank"><i class="fa fa-linkedin"></i></a>
+			<a href="http://plus.google.com/<?php echo $result['googleplus']; ?>" target="_blank"><i class="fa fa-google-plus"></i></a>
+		<?php } } ?>
+		</div>
+		<div class="searchbtn clear">
+		<form action="search.php" method="get">
+			<input type="text" name="search" placeholder="Search keyword..."/>
+			<input type="submit" name="submit" value="Search"/>
+		</form>
 		</div>
 	</div>
+</div>
 <div class="navsection templete">
 	<ul><?php
 	$path = $_SERVER['SCRIPT_FILENAME'];
