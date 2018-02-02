@@ -1,9 +1,20 @@
 <?php include "config/config.php"; ?>
 <?php include "lib/Database.php"; ?>
 <?php include "helpers/format.php"; ?>
+<?php include "lib/session.php"; ?>
 <?php
 $db = new Database(); //initilaizing Database object
 $fm = new Format(); //initilizing formate object
+?>
+<?php
+Session::init();
+if(Session::get("login")==true){
+    $username = $_SESSION['username'];
+    $id = $_SESSION['userid'];
+} else {
+    $username = "";
+    $id = "";
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -110,5 +121,10 @@ $(window).load(function() {
 				<li><a <?php if(isset($_GET['pageid']) && $_GET['pageid'] == $result['id']){echo 'id = "active"';} ?> href='page.php?pageid=<?php echo $result['id']; ?>'><?php echo $result['page_title']; ?></a></li>
 		<?php } } ?>
 		<li><a <?php if($currentpage == 'contact'){echo 'id = "active"';} ?> href="contact.php">Contact</a></li>
+		<?php  if(Session::get("login")==true){
+			echo "<li align='right'><a href='admin'>$username Panel</a></li>";
+		} else {
+			echo "<li align='right'><a href='admin/login.php'>Login</a></li>";
+		} ?>
 	</ul>
 </div>

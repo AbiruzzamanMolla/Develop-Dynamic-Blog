@@ -35,6 +35,8 @@
 - Contact Form Validation
 - Work With Contact Form
 
+### PROJECT CLOSED FOR BORINGNESS - 2/02/2018
+
 ## Full Project work tree
 
 - 'Develop Dynamic Blog With PHP OOP (Project Overview).mp4'

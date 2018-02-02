@@ -28,16 +28,20 @@ $fm = new Format(); //initilizing formate object
 			$query = "SELECT * FROM tbl_user WHERE username = '$username' AND pass = '$password'";
 			$result = $db->select($query);
 			if($result != false){
-				$value = mysqli_fetch_array($result); //retriving data from database
+				$value = mysqli_fetch_assoc($result); //retriving data from database
 				$row   = mysqli_num_rows($result);
+				$username = $value['username'];
+				$userid = $value['id'];
 				if($row > 0){ //initilizing session as global
 					Session::set("login", true);
-					Session::set("username",  $value['username']);
-					Session::set("userid",  $value['id']);
+					$_SESSION['username'] = $username;
+					$_SESSION['userid'] = $userid;
+					// Session::set("username",  $username);
+					// Session::set("userid",  $userid);
 					header("Location:index.php");
 
 				} else {
-					echo "<span style='color:red;font-size:20px;'>NOT FOUND.</span>";
+					echo "<span style='color:red;font-size:20px;'>User NOT FOUND.</span>";
 				}
 			} else {
 				echo "<span style='color:red;font-size:20px;'>Username and Password not matched.</span>";
