@@ -6,6 +6,5 @@
 				<?php echo $result['page_body']; ?>
 		</div>
 </div>
-				
 <?php include "inc/sideber.php"; ?>
 <?php include "inc/footer.php"; ?>
