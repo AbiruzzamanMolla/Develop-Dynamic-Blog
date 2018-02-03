@@ -2,7 +2,7 @@
 </div><div class="contentsection contemplete clear">
 <div class="maincontent clear">
 <?php
-$per_page = 3;
+$per_page = 5;
 if (isset($_GET['page'])) {
 	$page = $_GET['page'];
 } else {
