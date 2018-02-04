@@ -30,7 +30,7 @@
 			<td><?php echo $result['email']; ?></td>
 			<td><?php echo $fm->textShorten($result['body']); ?></td>
 			<td><?php echo $fm->formatData($result['date']); ?></td>
-			<td><a href="">View</a> || <a href="">Reply</a> || <a href="">Seen</a></td>
+			<td><a href="viewmsg.php?msgid=<?php echo $result['id']; ?>">View</a> || <a href="">Reply</a> || <a href="">Seen</a></td>
 		</tr>
 <?php } } ?>
 	</tbody>
