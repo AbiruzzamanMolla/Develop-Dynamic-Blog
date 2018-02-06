@@ -122,9 +122,9 @@ $(window).load(function() {
 		<?php } } ?>
 		<li><a <?php if($currentpage == 'contact'){echo 'id = "active"';} ?> href="contact.php">Contact</a></li>
 		<?php  if(Session::get("login")==true){
-			echo "<li align='right'><a href='admin'>$username Panel</a></li>";
+			echo "<li align='right'><a href='http://blog.admin'>$username Panel</a></li>";
 		} else {
-			echo "<li align='right'><a href='admin/login.php'>Login</a></li>";
+			echo "<li align='right'><a href='http://blog.admin/login.php'>Login</a></li>";
 		} ?>
 	</ul>
 </div>

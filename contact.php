@@ -81,16 +81,5 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
  </div>
 
 		</div>
-		<div class="sidebar clear">
-			<div class="samesidebar clear">
-				<h2>Latest articles</h2>
-					<ul>
-						<li><a href="#">Category One</a></li>
-						<li><a href="#">Category Two</a></li>
-						<li><a href="#">Category Three</a></li>
-						<li><a href="#">Category Four</a></li>
-						<li><a href="#">Category Five</a></li>
-					</ul>
-			</div>
 			<?php include "inc/sideber.php"; ?>
 			<?php include "inc/footer.php"; ?>

@@ -5,13 +5,26 @@
                 <h2>Add New Post</h2>
                 <div class="block">
                 <?php
+                  if(!isset($_GET['delid']) || $_GET['delid'] == null){
+                  } else {
+                      $delid = $_GET['delid'];
+                      $query = "DELETE FROM tbl_contect WHERE id='$delid'";
+                      $delete = $db->delete($query);
+                      if($delete){
+                          echo "<script>window.location = 'inbox.php?showmsg=1';</script>";
+                      } else {
+                          echo "Problem in deleting this message!";
+                      }
+                  }
+                  ?>
+                <?php
                   if(!isset($_GET['msgid']) || $_GET['msgid'] == null){
                       echo "<script>window.location = 'inbox.php';</script>";
                   } else {
                       $msgid = $_GET['msgid'];
                   }
                   ?>
-                <form action="" method="post" enctype="multipart/form-data">
+                <form>
                 <table class="form">
                 <?php
                 $query = "SELECT * FROM tbl_contect WHERE id='$msgid' ORDER BY id desc";
