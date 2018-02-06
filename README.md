@@ -35,6 +35,11 @@
 * Contact Form Validation
 * Work With Contact Form
 * Work With Inbox
+* Viewing Sent Messages
+* Reply messages
+* Send Messages to Seen Box
+* Delete Messages from Seen Box
+* Role Based Access Control
 
 ### PROJECT CLOSED FOR BORINGNESS - 2/02/2018
 
