@@ -83,7 +83,18 @@ $fm = new Format(); //initilizing formate object
                 <li class="ic-dashboard"><a href="index.php"><span>Dashboard</span></a> </li>
                 <li class="ic-form-style"><a href=""><span>User Profile</span></a></li>
 				<li class="ic-typography"><a href="changepassword.php"><span>Change Password</span></a></li>
-				<li class="ic-grid-tables"><a href="inbox.php"><span>Inbox</span></a></li>
+				<li class="ic-grid-tables">
+                <a href="inbox.php"><span>Inbox</span>
+                <?php
+                $query = "SELECT * FROM tbl_contect WHERE status = '0'";
+                $msg = $db->select($query);
+                if($msg){
+                    echo "(".$count = mysqli_num_rows($msg).")";
+                } else {
+                    $count = null;
+                }
+                ?>
+                </a></li>
                 <li class="ic-charts"><a href="http://php.blog"><span>Visit Website</span></a></li>
             </ul>
         </div>

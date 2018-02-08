@@ -97,4 +97,4 @@ if(!isset($_GET['seen']) || $_GET['seen'] == null){
     });
 </script>
 
-        <?php include "inc/footer.php"; ?>
+<?php include "inc/footer.php"; ?>
